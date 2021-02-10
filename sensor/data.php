@@ -1,0 +1,7 @@
+<?php 
+
+require "koneksidb.php";
+
+
+
+ ?>
