@@ -3,13 +3,13 @@
 #include "DHT.h" 
 
 
-#define DHTPIN D6    
+#define DHTPIN D6 //Pin Signal DHT11 terhubung ke pin D6 Nodemcu   
 #define DHTTYPE DHT11   // DHT 11
 
 DHT dht(DHTPIN, DHTTYPE);
 
-const char* ssid = "rdhdev"; //masukkan ssid
-const char* password = "lupasandi"; //masukkan password
+const char* ssid = "xxxxxx"; //masukkan ssid
+const char* password = "xxxxxx"; //masukkan password
 
 void setup () {
 
@@ -52,7 +52,7 @@ void loop() {
 
  
     HTTPClient http; 
-    String url =("http://192.168.1.5/sensor/getdata.php?");
+    String url =("http://192.168.1.5/sensor/getdata.php?"); //sesuaikan dengan ip address komputer anda
     http.begin(url + kelembaban + suhu);
     int httpCode = http.GET();
 
